@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome to Pastebin</h2>
+<p>
+    Pastebin is a simple and efficient way to share text online. Create a new paste, view your pastes,
+    or explore the latest pastes added by our users.
+</p>
+<h3>Latest Pastes</h3>
+<ul>
+    {% for paste in pastes %}
+        <li>
+            <a href="/pastes/{{ paste.id }}">{{ paste.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>All Pastes</h2>
+<ul>
+    {% for paste in pastes %}
+        <li>
+            <a href="/pastes/{{ paste.id }}">{{ paste.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
